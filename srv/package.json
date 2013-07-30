@@ -1,0 +1,10 @@
+{
+  "name": "lorelei.draw.server",
+  "description": "A web server with socket to connect the clients",
+  "author": "A. Matías Quezada <amatiasq@gmail.com>",
+  "dependencies": {
+    "express": "~3.3.4",
+    "socket.io": "~0.9.16"
+  },
+  "engine": "node 0.10.13"
+}
