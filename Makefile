@@ -1,13 +1,21 @@
 
-install:
-	cd srv; npm install
-	cd web; bower install
+install: install.helper install-from-npm
+
+install.helper: add-repos
+	npm install
+
+install-from-npm:
+	cd web; ../node_modules/.bin/bower install
+
+add-repos:
+	-git remote remove heroku
+	git remote add heroku git@heroku.com:lorelei-draw.git
 
 run:
-	node srv/main
+	node main
 
 lint:
-	jshint .
+	node_modules/.bin/jshint .
 
 clean:
-	rm -rf srv/node_modules web/bower_components
+	rm -rf node_modules web/bower_components
