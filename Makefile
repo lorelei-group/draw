@@ -5,7 +5,7 @@ install.helper: add-repos
 	npm install
 
 install-from-npm:
-	cd web; ../node_modules/.bin/bower install
+	cd public; ../node_modules/.bin/bower install
 
 add-repos:
 	-git remote remove heroku
@@ -18,4 +18,4 @@ lint:
 	node_modules/.bin/jshint .
 
 clean:
-	rm -rf node_modules web/bower_components
+	rm -rf node_modules public/bower_components

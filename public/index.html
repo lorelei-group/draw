@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]><script>document.location = 'http://browsehappy.com/'</script><![endif]-->
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Draw [LORELEI]</title>
+
+		<style>
+			html, body, #master {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+
+			#loader {
+				text-align: center;
+				padding-top: 25%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="loader">Loading...</div>
+
+		<div id="master" hidden>
+			<canvas id="draw-zone"></canvas>
+		</div>
+
+		<script data-main="src/main" src="bower_components/requirejs/require.js"></script>
+	</body>
+</html>
